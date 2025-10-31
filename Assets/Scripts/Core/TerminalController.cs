@@ -29,6 +29,9 @@ public class TerminalController : MonoBehaviour, IInteractable
     public void Interact()
     {
         Toggle();
+
+        Debug.Log("Terminal activado. Disparando evento OnObjectiveActivated.");
+        GameEvents.TriggerObjectiveActivated();
     }
 
     private void Toggle()
