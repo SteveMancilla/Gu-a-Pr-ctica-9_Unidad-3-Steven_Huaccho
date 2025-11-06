@@ -883,6 +883,7 @@ MonoBehaviour:
   lossPanel: {fileID: 346800402}
   loadingScreenPanel: {fileID: 761404446}
   loadingBar: {fileID: 889354125}
+  timerText: {fileID: 470715579}
 --- !u!4 &389400225
 Transform:
   m_ObjectHideFlags: 0
