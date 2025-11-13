@@ -37,19 +37,12 @@ Se desarrolló lo siguiente:
 ## 💭 Reflexión del Estudio
 
 ### **1. Sinergia y Fricción: ¿Cuál fue el mayor beneficio de trabajar en equipo para esta tarea? ¿Y cuál fue el mayor desafío de comunicación o coordinación que enfrentaron y cómo lo resolvieron?**  
-El mayor beneficio de trabajar en equipo fue la **división clara de roles**: mientras uno programaba la lógica interna, el otro configuraba y probaba en Unity.  
-El principal desafío fue **mantener sincronía** entre scripts, escena y valores expuestos, ya que cualquier desajuste rompía el comportamiento del enemigo.  
-La solución fue realizar **commits frecuentes**, comunicación constante y pruebas en conjunto.
+El mayor beneficio de trabajar en equipo fue la **división clara de roles**: mientras uno programaba la lógica interna, el otro configuraba y probaba en Unity. El principal desafío fue **mantener sincronía** entre scripts, escena y valores expuestos, ya que cualquier desajuste rompía el comportamiento del enemigo. La solución fue realizar **commits frecuentes**, comunicación constante y pruebas en conjunto.
 
 ### **2. El Alma de la Máquina: Más allá del código, ¿qué parámetro ([SerializeField]) descubrieron que tenía el mayor impacto en hacer que la IA se sintiera más "viva" o "inteligente"? 
 **(Ejemplo: detectionRadius, chaseSpeed, la diferencia entre detectionRadius y loseSightRadius, etc.)** 
 
-El parámetro que tuvo el mayor impacto en que la IA se sintiera realmente “viva” fue la combinación entre los radios de detección (`detectionRadius` y `loseSightRadius`) y 
-las velocidades diferenciadas entre patrulla y persecución (`patrolSpeed` y `chaseSpeed`), ya que estas variables definieron con precisión cuándo el enemigo debía reaccionar al jugador y 
-cuánta agresividad mostrar al entrar en modo de persecución. Además, la incorporación de `stunDuration` dentro del nuevo StunState añadió un toque de vulnerabilidad que hizo que la IA 
-dejara de sentirse como un objeto automático: ahora puede ser contenida temporalmente con el láser, lo que crea una sensación de interacción dinámica. 
-El ajuste cuidadoso de estos valores permitió que la IA patrullara de manera natural, respondiera rápidamente cuando el jugador entraba en su rango visual y se recuperara tras ser aturdida, 
-logrando un comportamiento más realista, reactivo y coherente con el entorno del juego.
+El parámetro que tuvo el mayor impacto en que la IA se sintiera realmente “viva” fue la combinación entre los radios de detección (`detectionRadius` y `loseSightRadius`) y las velocidades diferenciadas entre patrulla y persecución (`patrolSpeed` y `chaseSpeed`), ya que estas variables definieron con precisión cuándo el enemigo debía reaccionar al jugador y cuánta agresividad mostrar al entrar en modo de persecución. Además, la incorporación de `stunDuration` dentro del nuevo StunState añadió un toque de vulnerabilidad que hizo que la IA dejara de sentirse como un objeto automático: ahora puede ser contenida temporalmente con el láser, lo que crea una sensación de interacción dinámica. El ajuste cuidadoso de estos valores permitió que la IA patrullara de manera natural, respondiera rápidamente cuando el jugador entraba en su rango visual y se recuperara tras ser aturdida, logrando un comportamiento más realista, reactivo y coherente con el entorno del juego.
 
 En general el ba;lance estuve entre estos elementos:
 
