@@ -21,10 +21,7 @@ Aquí implementamos una IA basada en el **Patrón State**, un sistema de aturdim
 ---
 
 ## 🧩 Descripción del Hito  
-Este hito consistió en implementar una IA completa utilizando el **Patrón State**, integrarla al entorno del jugador y añadir un sistema de aturdimiento mediante un arma láser.
-En esta práctica implementamos un sistema de Inteligencia Artificial completo basado en el Patrón de Diseño *State*. 
-La IA del enemigo ahora cuenta con tres comportamientos principales: patrullar una ruta establecida, detectar y perseguir al jugador, y un nuevo estado de aturdimiento (*StunState*) 
-que detiene temporalmente al agente mediante un arma láser creada por el equipo. Este hito integró programación y configuración en Unity para lograr una IA funcional.
+Este hito consistió en implementar una IA completa utilizando el **Patrón State**, integrarla al entorno del jugador y añadir un sistema de aturdimiento mediante un arma láser. En esta práctica implementamos un sistema de Inteligencia Artificial completo basado en el Patrón de Diseño *State*. La IA del enemigo ahora cuenta con tres comportamientos principales: patrullar una ruta establecida, detectar y perseguir al jugador, y un nuevo estado de aturdimiento (*StunState*) que detiene temporalmente al agente mediante un arma láser creada por el equipo. Este hito integró programación y configuración en Unity para lograr una IA funcional.
 
 Se desarrolló lo siguiente:
 
