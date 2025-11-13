@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 ///<summary>
 /// Controlador principal de la IA. Gestiona el estado actual y las transiciones
@@ -17,9 +18,13 @@ public class AIController : MonoBehaviour
 
     public float detectionRadius = 10f;
 
-    public float loseSightRadius = 15f; 
-    
+    public float loseSightRadius = 15f;
+
     private AIState _currentState;
+
+    [Header("Stun")]  ///// stuner al enemigo por un tiempo
+    public float stunDuration = 3f;
+    private Coroutine _stunRoutine;
 
     private void Awake()
     {
@@ -41,4 +46,17 @@ public class AIController : MonoBehaviour
         _currentState.OnEnter();
     }
     
+    //stun
+    public void Stun(float? customDuration = null)
+    {
+        ChangeState(new StunState(this));
+        if (_stunRoutine != null) StopCoroutine(_stunRoutine);
+        _stunRoutine = StartCoroutine(StunCountdown(customDuration ?? stunDuration));
+    }
+    private IEnumerator StunCountdown(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        ChangeState(new PatrolState(this));   // volver a patrulla
+        _stunRoutine = null;
+    }
 }
