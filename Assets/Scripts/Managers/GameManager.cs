@@ -19,6 +19,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int _objectivesToWin = 3;
     private int _objectivesCompleted = 0;
 
+    //usar la clase de GameLogic
+    public GameLogic Logic { get; private set; } //Propiedad publica para acceder a la logica
+
 
     [Header("Timer Settings")]
     [SerializeField] private float _timeLimit = 60f; // tiempo total en segundos
@@ -38,6 +41,8 @@ public class GameManager : MonoBehaviour
         // opcional: 
         // DontDestroyOnLoad(gameObject); 
         // si necesitas que persista entre escenas
+
+        Logic = new GameLogic(_objectivesToWin); // Instanciamos nuestra lógica
     }
 
     // suscripción a eventos
@@ -55,13 +60,18 @@ public class GameManager : MonoBehaviour
     private void HandleObjectiveActivated()
     {
         if (_currentState != GameState.Playing) return;
-        _objectivesCompleted++;
+        //_objectivesCompleted++;
+        //Logic._objectivesCompleted();
         Debug.Log($"Objetivo completado. Progreso: {_objectivesCompleted}/{_objectivesToWin}");
 
-        if (_objectivesCompleted >= _objectivesToWin)
+        /*if (_objectivesCompleted >= _objectivesToWin)
         {
             _playerWon = true; // detener el temporizador
             UIManager.Instance?.ShowTimer(false);
+            ChangeState(GameState.Victory);
+        }*/
+        if (Logic.IsVictoryConditionMet)
+        {
             ChangeState(GameState.Victory);
         }
     }
