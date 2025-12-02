@@ -6,6 +6,8 @@ public class PlayerInteractor : MonoBehaviour
     [SerializeField] private float _interactionDistance = 3.5f;
     [SerializeField] private LayerMask _interactableMask = ~0; // por defecto: todo
 
+    [SerializeField] private Transform _rayOrigin;
+
     private Camera _mainCamera;
     private PlayerInputActions _inputActions;
 
